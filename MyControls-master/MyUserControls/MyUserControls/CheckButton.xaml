@@ -1,0 +1,48 @@
+﻿<UserControl x:Class="MyUserControls.CheckButton"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MyUserControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="70" d:DesignWidth="69" >
+    <UserControl.Resources>
+        <local:convert x:Key="Myconv"></local:convert>
+        <Style TargetType="ToggleButton" x:Key="DefaltButton">
+            <Setter Property="Background" Value="Red"></Setter>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ToggleButton">
+                        <Grid>
+                            <Rectangle x:Name="ButtonRec" Width="{TemplateBinding Width}" 
+                                       Height="{TemplateBinding Height,Converter={StaticResource Myconv}}"
+                                       Fill="{TemplateBinding Background}"
+                                       RadiusX="{Binding Path=Height,Converter={StaticResource Myconv} ,RelativeSource={RelativeSource Self}}"
+                                       RadiusY="{Binding Path=RadiusX,RelativeSource={RelativeSource Self}}"
+                                       >
+                            </Rectangle>
+                            <Ellipse x:Name="ButtonEll" Height="{TemplateBinding Height,Converter={StaticResource Myconv}}"
+                                     Width="{Binding RelativeSource={RelativeSource Self},Path=Height}"
+                                     Fill="White"
+                                     Stroke="Gray"
+                                     
+                                     ></Ellipse>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsChecked" Value="true">
+                                <Setter TargetName="ButtonEll" Property="HorizontalAlignment" Value="Right"></Setter>
+                            </Trigger>
+                            <Trigger Property="IsChecked" Value="false">
+                                <Setter Property="Fill" Value="Gray" TargetName="ButtonRec"></Setter>
+                                <Setter TargetName="ButtonEll" Property="HorizontalAlignment" Value="Left"></Setter>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
+    <Grid>
+        <ToggleButton Content="TogButton" Width="70" Height="70" Style="{StaticResource DefaltButton}"></ToggleButton>
+    </Grid>
+</UserControl>
