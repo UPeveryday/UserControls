@@ -42,6 +42,7 @@
             </Setter>
         </Style>
     </UserControl.Resources>
+
     <Grid>
         <ToggleButton Content="TogButton" Width="70" Height="70" Style="{StaticResource DefaltButton}"></ToggleButton>
     </Grid>
