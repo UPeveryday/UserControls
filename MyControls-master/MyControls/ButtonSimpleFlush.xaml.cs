@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,21 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace WpfTestCode
+namespace MyControls
 {
     /// <summary>
-    /// MainWindow.xaml 的交互逻辑
+    /// ButtonSimpleFlush.xaml 的交互逻辑
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class ButtonSimpleFlush : UserControl
     {
-        public MainWindow()
+        public ButtonSimpleFlush()
         {
             InitializeComponent();
-        }
-       // [Conditional("hello")]
-        private void Fbutton_Click(object sender, RoutedEventArgs e)
-        {
-            //throw new Exception();
         }
     }
 }

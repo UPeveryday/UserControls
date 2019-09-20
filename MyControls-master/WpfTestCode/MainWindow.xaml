@@ -5,9 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfTestCode"
         xmlns:us="clr-namespace:MyUserControls;assembly=MyUserControls"
+        xmlns:msc="clr-namespace:MyControls;assembly=MyControls"
+        xmlns:Fb="clr-namespace:MyControls.MyControls.Fbutton;assembly=MyControls"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+    <Window.Resources>
+        
+    </Window.Resources>
     <Grid>
-        <us:ClockUserCtrl></us:ClockUserCtrl>
+        <!--<msc:ButtonSimpleFlush Content="hello"></msc:ButtonSimpleFlush>-->
+        <!--<msc:KibaDataTime Hour="10" Minute="56"  TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" Secord="12"></msc:KibaDataTime>-->
+        <Fb:Fbutton  Foreground="Green" Click="Fbutton_Click" BorderThickness="1,0,0,0" DownLine="Yellow" Cursor="ScrollS" Height="50" Width="100" Content="ClickmE"  FontSize="20" Margin="10,10,682,359"/>
+        <Fb:Fbutton  Foreground="Green" Click="Fbutton_Click" BorderThickness="1,0,0,0" DownLine="Yellow" Cursor="ScrollS" Height="50" Width="100" Content="ClickmE"  FontSize="20" Margin="10,75,682,294" Style="{DynamicResource FbuttonStyle1}"/>
+        <Fb:Fbutton  Foreground="Green" Click="Fbutton_Click" BorderThickness="1,0,0,0" DownLine="Yellow" Cursor="ScrollS" Height="50" Width="100" Content="ClickmE"  FontSize="20" Margin="10,139,682,230"/>
+        <Fb:Fbutton  Foreground="Green" Click="Fbutton_Click" BorderThickness="1,0,0,0" DownLine="Yellow" Cursor="ScrollS" Height="50" Width="100" Content="ClickmE"  FontSize="20" Margin="10,204,682,165"/>
     </Grid>
 </Window>

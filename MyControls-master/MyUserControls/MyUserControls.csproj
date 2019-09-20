@@ -53,6 +53,9 @@
       <DependentUpon>CheckButton.xaml</DependentUpon>
     </Compile>
     <Compile Include="Convert\convert.cs" />
+    <Compile Include="TextButton.xaml.cs">
+      <DependentUpon>TextButton.xaml</DependentUpon>
+    </Compile>
     <Page Include="CheckButton.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -65,6 +68,10 @@
       <DependentUpon>ClockUserCtrl.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="TextButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
